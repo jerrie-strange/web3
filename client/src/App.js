@@ -1,21 +1,27 @@
 import { ethers } from "ethers";
 
 function App() {
+  let userAddress
+  (async function () {
+    const provider =  new ethers.providers.Web3Provider(
+      window.ethereum,
+      "any"
+    );
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner();
+  
+    await signer.getAddress();
+    return console.log(userAddress);
+  })()
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> {userAddress}and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       
+         
       </header>
     </div>
   );
