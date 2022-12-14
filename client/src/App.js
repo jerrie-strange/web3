@@ -1,26 +1,20 @@
-import { ethers } from "ethers";
-
+import { Home } from './components/Home';
+import {connectMatamask} from './ethers'
 function App() {
   let userAddress
-  (async function () {
-    const provider =  new ethers.providers.Web3Provider(
-      window.ethereum,
-      "any"
-    );
-    await provider.send("eth_requestAccounts", []);
-    const signer = provider.getSigner();
-  
-    await signer.getAddress();
-    return console.log(userAddress);
-  })()
+ 
+//  async function getBalance() {
+//   balance = await signer.getBalance("ethers.eth")
+//   const convertToEth = 1e18;
+//   console.log("account balance in ethers", balance.toString()/ convertToEth)
+//  }
+ 
   return (
     <div className="App">
       <header className="App-header">
-        
-        <p>
-          Edit <code>src/App.js</code> {userAddress}and save to reload.
-        </p>
-       
+        {/* <button onClick={getBalance}>get balance</button> */}
+        <Home/>
+        {/* <button onClick={connectMatamask}>connect your wallet</button> */}
          
       </header>
     </div>

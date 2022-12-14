@@ -1,0 +1,52 @@
+.btn-primary{
+    background-color: blue;
+    border-radius: 0.8rem;
+    height: 50px;
+    width: 90px;
+    color: aliceblue;
+    font-family: monospace;
+    margin: 15px;
+
+}
+.btn-success{
+    background-color: green;
+    border-radius: 0.8rem;
+    height: 50px;
+    width: 90px;
+    color: aliceblue;
+    font-family: monospace;
+    margin: 15px;
+    
+}
+.input{
+    /* background-color: red; */
+    border-radius: 0.8rem;
+    height: 40px;
+    width: 90%;
+    color: rgb(12, 136, 245);
+    font-family: monospace;
+    
+}
+
+*{
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+}
+.form-control{
+    width: 60vw;
+    align-items: center;
+}
+fieldset{
+    border: 0px;
+}
+.bg{
+    background-color: black;
+    height: 100vh;
+    color: blanchedalmond;
+    width: 100vw;
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+}
